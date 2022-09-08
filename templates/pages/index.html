@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 
 {% load humanize %}
+
+{% block title %}
+    | WELCOME
+{% endblock %}
+
 {% block  content %}
      <!-- Showcase -->
   <section id="showcase">
@@ -62,7 +67,9 @@
       </div>
     </div>
   </section>
-
+  <br>
+  <!-- alerts -->
+  {% include 'partials/_alert.html' %}
   <!-- Listings -->
   <section id="listings" class="py-5">
     <div class="container">
@@ -115,6 +122,9 @@
               </div>
       
           {% endfor %}
+          <div class="mr-6 align-content-center" >
+            <a href="{% url 'listings' %}" class="btn btn-primary btn-block mr-3" >VIEW MORE HOUSES</a>
+          </div>
         {% else %}
           <div class="col-md-12">
             <p>No Listing Available</p>

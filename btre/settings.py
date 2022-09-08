@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'listings.apps.ListingsConfig',
     'accounts.apps.AccountsConfig',
     'realtors.apps.RealtorsConfig',
+    'contact.apps.ContactConfig',
     'django.contrib.humanize',
 ]
 
@@ -85,7 +86,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'Gmail@080',
         'HOST': 'localhost',
-       
+
 
     }
 }
@@ -133,7 +134,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'btre/static')
 ]
 
-# Media Folder settings 
+# Media Folder settings
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
@@ -142,5 +143,13 @@ MEDIA_URL = '/media/'
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
-    
+
 }
+
+
+# email config
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER='oluwaferanmirabiu9@gmail.com'
+EMAIL_HOST_PASSWORD='GMAIL@080'
+EMAIL_USE_TLS=True
